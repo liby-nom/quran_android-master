@@ -1,0 +1,12 @@
+include ':app'
+include ':common:audio'
+include ':common:data'
+include ':common:networking'
+include ':common:pages'
+include ':common:search'
+include ':feature:audio'
+include ':pages:madani'
+
+if (new File(rootDir, 'extras/settings-extra.gradle').exists()) {
+   apply from: new File(rootDir, 'extras/settings-extra.gradle')
+}
